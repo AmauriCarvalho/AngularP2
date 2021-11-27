@@ -1,0 +1,16 @@
+<p>
+Nome da Tarefa:
+<input #value type="text">
+<button (click)="tasks.addTask(value.value)">Adicionar</button>
+</p>
+<table border="1">
+  <tr>
+    <td>Tarefa</td>
+    <td>Remover</td>
+  </tr>
+  <tr *ngFor="let task of this.tasks.getLista(), index as i">
+  <td>{{task.tarefa}}</td>
+  <td><button (click)="tasks.removeTasks(i)">x</button></td>
+</tr>
+
+</table>
